@@ -11,18 +11,19 @@ Register a game by name on each device, and SaveDeck keeps the saves of games wi
 
 ### Features
 
-- **LAN peer-to-peer sync** — devices on the same network find each other automatically and exchange saves directly. No account needed.
-- **Optional Google Drive sync** — saves are stored as normal folders and files under a `SaveDeck` folder in *your* Drive (you can browse, download or delete them there). SaveDeck only requests the `drive.file` scope, so it can access only the files it created.
-- **Safe by design** — SHA-256 verification, atomic replace, rolling `.bak` backups before every overwrite, and path-traversal protection.
-- **Only changes are transferred** — unchanged files are skipped.
-- **Conflict-aware** — if both sides changed with the same timestamp but different content, SaveDeck skips instead of overwriting.
-- **Hidden folders supported** — the path picker shows hidden folders (handy on Steam Deck / Linux), and you can paste a path directly.
+- **Works on your home network** — your devices find each other automatically and swap saves directly. No account needed.
+- **Optional Google Drive sync** — saves go into a `SaveDeck` folder in *your own* Google Drive as ordinary folders and files, so you can open, download or delete them there. SaveDeck can only touch the files it created, never the rest of your Drive.
+- **Your old save is never lost** — before a save file is replaced, SaveDeck keeps a backup copy of the old one (`.bak` files; you choose how many).
+- **Fast** — only the files that changed are sent.
+- **Won't overwrite blindly** — if both devices changed the save and SaveDeck can't tell which is newer, it leaves both untouched and tells you.
+- **Catches broken transfers** — every received file is checked to be complete before it replaces anything.
+- **Steam Deck friendly** — the folder picker shows hidden folders, and you can also paste a path.
 
 ### How it works
 
 1. Install SaveDeck on each device.
 2. Add the same game name on every device and point it at that device's save path (paths may differ per device).
-3. Press **Sync** (P2P peer or Google Drive).
+3. Press **Sync** (to another device on your network, or to Google Drive).
 
 ### Run from source
 
@@ -46,18 +47,19 @@ SaveDeck sends nothing to the developer's servers. See the [Privacy Policy](http
 
 ### 기능
 
-- **같은 네트워크 P2P 동기화** — 같은 네트워크의 기기를 자동으로 찾아 세이브를 직접 주고받습니다. 계정이 필요 없습니다.
-- **선택 기능: 구글 드라이브 동기화** — *본인* 드라이브의 `SaveDeck` 폴더에 일반 폴더와 파일 그대로 저장되어, 드라이브에서 직접 보고 내려받고 삭제할 수 있습니다. `drive.file` 권한만 요청하므로 SaveDeck이 만든 파일에만 접근합니다.
-- **안전한 동작** — SHA-256 검증, 원자적 교체, 덮어쓰기 전 `.bak` 백업 순환, 경로 탈출 차단.
-- **바뀐 파일만 전송** — 같은 파일은 건너뜁니다.
-- **충돌 감지** — 수정 시각은 같은데 내용이 다르면 덮어쓰지 않고 건너뜁니다.
-- **숨김 폴더 지원** — 경로 선택 창에 숨김 폴더가 보이고(스팀덱/리눅스에 유용), 경로를 직접 붙여넣을 수도 있습니다.
+- **집 네트워크에서 바로 동기화** — 같은 네트워크에 있는 내 기기를 자동으로 찾아서 세이브를 직접 주고받습니다. 계정이 필요 없습니다.
+- **선택 기능: 구글 드라이브** — 내 드라이브의 `SaveDeck` 폴더에 일반 폴더와 파일 그대로 저장돼서, 드라이브에서 직접 열어 보고 내려받고 지울 수 있습니다. SaveDeck은 자기가 만든 파일에만 손댈 수 있고, 드라이브의 다른 파일은 건드리지 못합니다.
+- **기존 세이브가 사라지지 않습니다** — 세이브 파일을 바꾸기 전에 이전 파일을 자동으로 백업해 둡니다. (`.bak` 파일이며, 보관 개수는 직접 정할 수 있습니다.)
+- **빠르게** — 바뀐 파일만 보냅니다.
+- **함부로 덮어쓰지 않습니다** — 양쪽 기기에서 모두 바뀌어서 어느 쪽이 최신인지 알 수 없으면, 아무것도 건드리지 않고 알려 줍니다.
+- **전송 오류를 감지합니다** — 받은 파일이 온전한지 확인한 뒤에만 교체합니다.
+- **스팀덱에서도 편하게** — 폴더 선택 창에 숨김 폴더가 보이고, 경로를 붙여넣을 수도 있습니다.
 
 ### 사용 방법
 
 1. 각 기기에 SaveDeck을 설치합니다.
 2. 모든 기기에서 **같은 게임 이름**으로 추가하고, 기기마다 그 기기의 세이브 경로를 지정합니다. (경로는 기기마다 달라도 됩니다.)
-3. **동기화**를 누릅니다. (P2P 상대 또는 구글 드라이브)
+3. **동기화**를 누릅니다. (같은 네트워크의 다른 기기 또는 구글 드라이브)
 
 ### 소스로 실행
 
@@ -70,4 +72,4 @@ Windows 실행 파일 빌드: `.\build.ps1` (PyInstaller 필요)
 
 ### 개인정보
 
-SaveDeck은 개발자 서버로 어떤 정보도 보내지 않습니다. [개인정보처리방침](https://aedurappa.github.io/SaveDeck/privacy.html)을 참고하세요.
+SaveDeck은 개발자 서버로 어떤 정보도 보내지 않습니다. [개인정보처리방침](https://aedurappa.github.io/SaveDeck/privacy.html)을 참고해 주시기 바랍니다.
