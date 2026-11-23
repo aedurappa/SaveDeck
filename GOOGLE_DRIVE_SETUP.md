@@ -6,7 +6,7 @@ To use Google Drive sync in SaveDeck, you create a **Client ID** and **Client se
 These values only tell Google "SaveDeck may access my Drive". They are not a key to the rest of your Drive.
 
 - **Cost**: free. No payment card is needed.
-- **Time**: about 15–20 minutes, once.
+- **Time**: about 5 minutes, once.
 - **You need**: one Google account.
 
 > If you see "Start free trial" or "Link a billing account", ignore it. It is not needed for this.
