@@ -25,6 +25,13 @@ Register a game by name on each device, and SaveDeck keeps the saves of games wi
 2. Add the same game name on every device and point it at that device's save path (paths may differ per device).
 3. Press **Sync** (to another device on your network, or to Google Drive).
 
+### Google Drive setup
+
+Google Drive sync needs a free Client ID that you create once in Google Cloud.
+Follow the step-by-step guide: **[Google Drive Setup Guide](GOOGLE_DRIVE_SETUP.md)**.
+
+It covers creating the project, enabling the Drive API, the data access scope, test users, creating the client, publishing the app (optional), and the limits when the app is not published (for example, signing in again every 7 days).
+
 ### Run from source
 
 ```powershell
@@ -60,6 +67,13 @@ SaveDeck sends nothing to the developer's servers. See the [Privacy Policy](http
 1. 각 기기에 SaveDeck을 설치합니다.
 2. 모든 기기에서 **같은 게임 이름**으로 추가하고, 기기마다 그 기기의 세이브 경로를 지정합니다. (경로는 기기마다 달라도 됩니다.)
 3. **동기화**를 누릅니다. (같은 네트워크의 다른 기기 또는 구글 드라이브)
+
+### 구글 드라이브 설정
+
+구글 드라이브 동기화를 쓰려면 Google Cloud에서 무료 클라이언트 ID를 한 번 발급받아야 합니다.
+단계별 안내는 **[구글 드라이브 설정 가이드](GOOGLE_DRIVE_SETUP.ko.md)** 를 참고해 주시기 바랍니다.
+
+프로젝트 만들기, Drive API 사용 설정, 데이터 액세스 범위, 테스트 사용자, 클라이언트 만들기, 앱 게시(선택 사항), 그리고 게시하지 않았을 때의 제한(7일마다 다시 로그인 등)을 다룹니다.
 
 ### 소스로 실행
 
