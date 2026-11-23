@@ -149,13 +149,13 @@ Things that are **not** a problem:
 
 If signing in every 7 days is annoying, publish the app to **"In production"**. Then sign-ins do not expire, except after long disuse (about 6 months) or if you revoke access. Test users are no longer needed.
 
-Publishing needs a **home page URL** and a **privacy policy URL**. Without them, the **Publish app** button stays disabled. If you do not have your own pages, you can use SaveDeck's official pages.
+Publishing needs your own public **home page URL** and **privacy policy URL**. Without them, the **Publish app** button stays disabled.
 
 1. Click **Branding** in the left menu.
-2. Under **App domain**, enter:
-   - Application home page: `https://aedurappa.github.io/SaveDeck/`
-   - Application privacy policy link: `https://aedurappa.github.io/SaveDeck/privacy.html`
-3. "Missing domain: aedurappa.github.io" appears under **Authorized domains**. Click **+ Add domain** and enter `aedurappa.github.io`.
+2. Under **App domain**, enter your own URLs:
+   - Application home page
+   - Application privacy policy link
+3. "Missing domain: …" appears under **Authorized domains**. Click **+ Add domain** and enter the domain shown.
 4. Click **Save** at the bottom.
 5. In **Audience**, click **Publish app** and confirm.
 6. When the status shows **In production**, sign in to SaveDeck once more.
@@ -164,8 +164,6 @@ What remains after publishing:
 
 - **The "unverified app" screen still appears.** To remove it you need Google's **brand verification**, which requires a home page and privacy policy on a **domain you can prove you own** (verified in Google Search Console). Third-party platform addresses like `github.io` may not be provable.
 - `drive.file` is non-sensitive, so publishing without brand verification does **not** put a user cap on the app (according to Google's docs).
-
-> Note: saving these SaveDeck page URLs and enabling the Publish button was confirmed on the developer's own project. Google's screens and policies may change.
 
 ## Troubleshooting
 
